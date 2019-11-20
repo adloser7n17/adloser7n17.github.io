@@ -151,6 +151,123 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PAT乙级-1001" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/20/PAT%E4%B9%99%E7%BA%A7-1001/">PAT乙级-1001</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/20/PAT%E4%B9%99%E7%BA%A7-1001/" class="archive-article-date">
+  	<time datetime="2019-11-20T15:51:35.407Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1001-害死人不偿命的-3n-1-猜想"><a href="#1001-害死人不偿命的-3n-1-猜想" class="headerlink" title="1001-害死人不偿命的(3n+1)猜想"></a>1001-害死人不偿命的(3n+1)猜想</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><blockquote>
+<p>卡拉兹(Callatz)猜想：</p>
+</blockquote>
+<blockquote>
+<p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p>
+</blockquote>
+<blockquote>
+<p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p>
+</blockquote>
+<blockquote>
+<p>输入格式：</p>
+</blockquote>
+<blockquote>
+<p>每个测试输入包含 1 个测试用例，即给出正整数 n 的值。</p>
+</blockquote>
+<blockquote>
+<p>输出格式：</p>
+</blockquote>
+<blockquote>
+<p>输出从 n 计算到 1 需要的步数。</p>
+</blockquote>
+<blockquote>
+<p>输入样例：</p>
+</blockquote>
+<blockquote>
+<p><code>3</code></p>
+</blockquote>
+<blockquote>
+<p>输出样例：</p>
+</blockquote>
+<blockquote>
+<p><code>5</code></p>
+</blockquote>
+<p>##分析</p>
+<p>由题可得最后一定在某一步得到n=1，所以调用<kbd>while循环</kbd>为偶数时对2取余，计数器加1；为奇数时为(3*n+1)/2，计数器加1;直至n为1时循环停止，输出计数器值。</p>
+<p>##代码</p>
+<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int main(){
+    int n,ans=0;
+    scanf(&quot;%d&quot;,&amp;n);
+    while(n!=1){
+        if(n%2==0){
+            n/=2;
+            ans++;
+        }
+        else{
+            n=(3*n+1)/2;
+            ans++;
+        }
+    }
+    printf(&quot;%d\n&quot;,ans);
+    return 0;
+}</code></pre><p>##网站</p>
+<p><kbd><a href="http://www.adloser7n17.top" target="_blank" rel="noopener">www.adloser7n17.top</a></kbd></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/20/PAT%E4%B9%99%E7%BA%A7-1001/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
